@@ -22,6 +22,15 @@ export default function MissionPage() {
             backgroundSize: "28px 28px",
           }}
         >
+          {/* Background stock image */}
+          <div
+            className="absolute inset-0 opacity-[0.18]"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&auto=format&fit=crop&q=80')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
           {/* Top vignette so nav stays readable */}
           <div className="pointer-events-none absolute inset-x-0 top-0 h-40
                           bg-gradient-to-b from-ink to-transparent" />
@@ -60,25 +69,16 @@ export default function MissionPage() {
         <section className="bg-surface py-28 lg:py-40 border-b border-border">
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
             <div className="max-w-4xl">
-              {/* Oversized decorative quote mark */}
-              <div
-                className="font-display font-bold text-gold/12 leading-none select-none"
-                style={{ fontSize: "11rem", lineHeight: 1 }}
-                aria-hidden="true"
-              >
-                &ldquo;
+              <div className="border-l-2 border-gold pl-10 lg:pl-14">
+                <blockquote
+                  className="font-display font-bold text-bone leading-[1.12]"
+                  style={{ fontSize: "clamp(1.6rem, 3.2vw, 3rem)" }}
+                >
+                  We exist at the intersection of ambition and execution. We
+                  don&rsquo;t just solve problems — we transform the way problems
+                  are understood, approached, and ultimately resolved.
+                </blockquote>
               </div>
-
-              <blockquote
-                className="font-display font-bold text-bone leading-[1.12] -mt-10"
-                style={{ fontSize: "clamp(1.6rem, 3.2vw, 3rem)" }}
-              >
-                We exist at the intersection of ambition and execution. We
-                don&rsquo;t just solve problems — we transform the way problems
-                are understood, approached, and ultimately resolved.
-              </blockquote>
-
-              <div className="mt-12 h-px w-16 bg-gold/40" />
             </div>
           </div>
         </section>
@@ -88,7 +88,7 @@ export default function MissionPage() {
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
             <div className="flex items-center gap-5 mb-20">
               <div className="h-px w-12 bg-gold/40" />
-              <span className="text-sm tracking-[0.25em] uppercase text-dim">
+              <span className="text-sm tracking-[0.25em] uppercase text-gold">
                 Our Values
               </span>
             </div>
@@ -131,7 +131,7 @@ export default function MissionPage() {
                 },
               ].map(({ title, body, icon }) => (
                 <div key={title} className="flex flex-col gap-7">
-                  <span className="text-gold/65">{icon}</span>
+                  <span className="text-gold">{icon}</span>
                   <div>
                     <h3 className="font-display text-2xl font-bold text-bone mb-4">
                       {title}
@@ -153,7 +153,7 @@ export default function MissionPage() {
               <div>
                 <div className="flex items-center gap-5 mb-12">
                   <div className="h-px w-12 bg-gold/40" />
-                  <span className="text-sm tracking-[0.25em] uppercase text-dim">
+                  <span className="text-sm tracking-[0.25em] uppercase text-gold">
                     Philosophy
                   </span>
                 </div>
@@ -181,7 +181,7 @@ export default function MissionPage() {
               {/* Right: abstract analytics visual */}
               <div className="border border-border bg-raised p-8 lg:p-10 hidden lg:block"
                 style={{ boxShadow: "inset 0 1px 0 rgba(197,169,122,0.05)" }}>
-                <p className="text-[10px] tracking-[0.3em] uppercase text-ghost mb-8">
+                <p className="text-[10px] tracking-[0.3em] uppercase text-dim mb-8">
                   Work Hard Analytics Platform™
                 </p>
                 <div className="flex flex-col gap-7">
@@ -227,13 +227,27 @@ export default function MissionPage() {
                       <p className="font-display font-bold text-gold text-xl leading-none mb-1">
                         {val}
                       </p>
-                      <p className="text-[10px] tracking-[0.15em] uppercase text-ghost">
+                      <p className="text-[10px] tracking-[0.15em] uppercase text-dim">
                         {label}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
+            </div>
+
+            {/* Philosophy stock image */}
+            <div className="mt-16 relative h-56 lg:h-72 overflow-hidden">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&auto=format&fit=crop&q=80')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center 40%",
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-surface" />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-surface/60" />
             </div>
           </div>
         </section>
@@ -243,15 +257,13 @@ export default function MissionPage() {
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
             <div className="flex items-center gap-5 mb-20">
               <div className="h-px w-12 bg-gold/40" />
-              <span className="text-sm tracking-[0.25em] uppercase text-dim">
+              <span className="text-sm tracking-[0.25em] uppercase text-gold">
                 Our History
               </span>
             </div>
 
-            {/* Timeline — horizontal rule + 4 columns */}
+            {/* Timeline — 4 columns */}
             <div className="relative">
-              {/* Full-width connecting rule, aligned to the diamond markers */}
-              <div className="hidden md:block absolute top-[0.6rem] left-0 right-0 h-px bg-border" />
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
                 {[
@@ -313,16 +325,16 @@ export default function MissionPage() {
             <div className="max-w-2xl">
               <div className="flex items-center gap-5 mb-12">
                 <div className="h-px w-12 bg-gold/40" />
-                <span className="text-sm tracking-[0.25em] uppercase text-dim">
+                <span className="text-sm tracking-[0.25em] uppercase text-gold">
                   Get Involved
                 </span>
               </div>
 
               <h2
                 className="font-display font-bold text-bone leading-[0.93] mb-8"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+                style={{ fontSize: "clamp(2.5rem, 3.8vw, 4rem)" }}
               >
-                A Mission Worth Working Hard For
+                A Mission Worth<br />Working Hard For
               </h2>
 
               <p className="text-dim text-base leading-relaxed mb-12 max-w-lg">

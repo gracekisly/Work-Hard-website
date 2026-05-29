@@ -288,29 +288,18 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Right: abstract grid visual */}
-              <div className="relative hidden lg:block h-72">
-                <svg width="100%" height="100%" viewBox="0 0 480 288" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-20">
-                  {/* Fine grid */}
-                  {Array.from({ length: 13 }).map((_, i) => (
-                    <line key={`v${i}`} x1={i * 40} y1="0" x2={i * 40} y2="288" stroke="#C5A97A" strokeWidth="0.5"/>
-                  ))}
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <line key={`h${i}`} x1="0" y1={i * 40} x2="480" y2={i * 40} stroke="#C5A97A" strokeWidth="0.5"/>
-                  ))}
-                  {/* Accent nodes — representing global presence */}
-                  {[
-                    [80, 80], [200, 40], [360, 120], [120, 200], [280, 160], [440, 80], [40, 240], [320, 240],
-                  ].map(([cx, cy], i) => (
-                    <circle key={i} cx={cx} cy={cy} r="3" fill="#C5A97A" opacity="0.9"/>
-                  ))}
-                  {/* Connection lines */}
-                  <polyline points="80,80 200,40 360,120 280,160 320,240" stroke="#C5A97A" strokeWidth="0.5" opacity="0.6"/>
-                  <polyline points="80,80 120,200 40,240" stroke="#C5A97A" strokeWidth="0.5" opacity="0.4"/>
-                  <polyline points="360,120 440,80" stroke="#C5A97A" strokeWidth="0.5" opacity="0.4"/>
-                </svg>
-                {/* Fade out bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-ink to-transparent" />
+              {/* Right: aerial city image */}
+              <div className="relative hidden lg:block h-80 overflow-hidden">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&auto=format&fit=crop&q=80')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
               </div>
             </div>
           </div>
