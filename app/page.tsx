@@ -291,7 +291,7 @@ export default function Home() {
               {[
                 { value: "#1", label: "in customer satisfaction across 12 consecutive quarters" },
                 { value: "94%", label: "reduction in client operational inefficiency" },
-                { value: "$18.2B", label: "total contract value secured in 2025" },
+                { value: "$8.2B", label: "total contract value secured in 2025" },
                 { value: "99.97%", label: "uptime across all infrastructure" },
               ].map(({ value, label }) => (
                 <div key={value} className="bg-surface p-10 lg:p-12">
