@@ -322,48 +322,62 @@ export default function MissionPage() {
           />
 
           <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-5 mb-12">
-                <div className="h-px w-12 bg-gold/40" />
-                <span className="text-sm tracking-[0.25em] uppercase text-gold">
-                  Get Involved
-                </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+              {/* Left: text */}
+              <div>
+                <div className="flex items-center gap-5 mb-12">
+                  <div className="h-px w-12 bg-gold/40" />
+                  <span className="text-sm tracking-[0.25em] uppercase text-gold">
+                    Get Involved
+                  </span>
+                </div>
+
+                <h2
+                  className="font-display font-bold text-bone leading-[0.93] mb-8"
+                  style={{ fontSize: "clamp(2rem, 2.8vw, 3rem)" }}
+                >
+                  A Mission Worth<br />Working Hard For
+                </h2>
+
+                <p className="text-dim text-base leading-relaxed mb-12 max-w-lg">
+                  If you believe in what we&rsquo;re building, we&rsquo;d love to
+                  talk.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="/careers"
+                    className="inline-flex items-center justify-center px-8 py-4
+                               bg-gold text-ink text-base tracking-[0.2em] uppercase font-bold
+                               hover:bg-gold-bright transition-colors duration-200
+                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink
+                               active:opacity-90"
+                  >
+                    Join Our Team
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center px-8 py-4
+                               border border-bone/25 text-bone text-base tracking-[0.2em] uppercase font-bold
+                               hover:border-bone/60 hover:bg-white/5 transition-colors duration-200
+                               focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-bone/50 focus-visible:ring-offset-1 focus-visible:ring-offset-ink
+                               active:bg-white/10"
+                  >
+                    Contact Us
+                  </a>
+                </div>
               </div>
 
-              <h2
-                className="font-display font-bold text-bone leading-[0.93] mb-8"
-                style={{ fontSize: "clamp(2.5rem, 3.8vw, 4rem)" }}
-              >
-                A Mission Worth<br />Working Hard For
-              </h2>
-
-              <p className="text-dim text-base leading-relaxed mb-12 max-w-lg">
-                If you believe in what we&rsquo;re building, we&rsquo;d love to
-                talk.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/careers"
-                  className="inline-flex items-center justify-center px-8 py-4
-                             bg-gold text-ink text-base tracking-[0.2em] uppercase font-bold
-                             hover:bg-gold-bright transition-colors duration-200
-                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink
-                             active:opacity-90"
-                >
-                  Join Our Team
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4
-                             border border-bone/25 text-bone text-base tracking-[0.2em] uppercase font-bold
-                             hover:border-bone/60 hover:bg-white/5 transition-colors duration-200
-                             focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-bone/50 focus-visible:ring-offset-1 focus-visible:ring-offset-ink
-                             active:bg-white/10"
-                >
-                  Contact Us
-                </a>
-              </div>
+              {/* Right: image */}
+              <div
+                className="hidden lg:block h-96 overflow-hidden"
+                style={{
+                  backgroundImage: "url('https://images.unsplash.com/photo-1555963153-11ff60182d08?w=900&auto=format&fit=crop&q=80')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
             </div>
           </div>
         </section>

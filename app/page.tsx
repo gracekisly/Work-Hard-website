@@ -93,11 +93,11 @@ export default function Home() {
         </section>
 
         {/* ─── SECTION 1.2: STATS TICKER ─────────────────────────────────── */}
-        <div className="relative bg-surface border-y border-border overflow-hidden">
+        <div className="relative bg-white border-y border-border overflow-hidden">
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10
-                          bg-gradient-to-r from-surface to-transparent" />
+                          bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10
-                          bg-gradient-to-l from-surface to-transparent" />
+                          bg-gradient-to-l from-white to-transparent" />
 
           <div
             className="flex whitespace-nowrap py-5"
@@ -117,17 +117,80 @@ export default function Home() {
             ].map((stat, i) => (
               <span
                 key={i}
-                className="inline-flex items-center text-base tracking-[0.12em] uppercase text-bone/70"
+                className="inline-flex items-center text-base tracking-[0.12em] uppercase text-ink"
               >
                 <span className="px-10">{stat}</span>
-                <span className="text-gold/50 text-base font-light">·</span>
+                <span className="text-ink/40 text-base font-light">·</span>
               </span>
             ))}
           </div>
         </div>
 
+        {/* ─── SECTION 1.2.5: HQ SHOWCASE ─────────────────────────────────── */}
+        <section className="bg-surface border-b border-border">
+          <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto py-20 lg:py-28">
+
+            {/* Eyebrow — full width, matches other sections */}
+            <div className="flex items-center gap-5 mb-16">
+              <div className="h-px w-12 bg-gold/40" />
+              <span className="text-sm tracking-[0.25em] uppercase text-dim">
+                Global HQ
+              </span>
+            </div>
+
+            {/* Two-column content, vertically centered */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+              {/* Left: image + caption */}
+              <div>
+                <div
+                  className="w-full h-72 lg:h-80 overflow-hidden"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1443527394413-4b820fd08dde?w=900&auto=format&fit=crop&q=80')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
+                <p className="mt-4 text-[11px] tracking-[0.12em] uppercase text-dim/50 leading-relaxed">
+                  Recognized by Architectural Digest Business as one of the Top 10
+                  Corporate Headquarters of 2024. Certified by the U.S. Green
+                  Building Council.
+                </p>
+              </div>
+
+              {/* Right: heading + address + body */}
+              <div>
+                <h2
+                  className="font-display font-bold text-bone leading-[0.93] mb-5"
+                  style={{ fontSize: "clamp(2rem, 3.2vw, 3.5rem)" }}
+                >
+                  Where the Work<br />Gets Done
+                </h2>
+                <p className="text-gold text-sm tracking-[0.2em] uppercase font-medium mb-8">
+                  1 Enterprise Plaza, New York, NY 10001
+                </p>
+                <div className="flex flex-col gap-5">
+                  <p className="text-dim text-base leading-relaxed">
+                    Our global headquarters stands as a testament to what Work Hard
+                    Company represents: precision, ambition, and an uncompromising
+                    standard of excellence. Completed in 2024 following an extensive
+                    renovation, our 47-story flagship facility is LEED Platinum
+                    certified, carbon neutral, and engineered to the highest
+                    specifications of modern enterprise infrastructure.
+                  </p>
+                  <p className="text-dim text-base leading-relaxed">
+                    When you step into 1 Enterprise Plaza, you understand immediately
+                    that something important happens here. We wouldn&rsquo;t have it
+                    any other way.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ─── SECTION 1.3: MARQUEE STATEMENT ────────────────────────────── */}
-        <section className="bg-ink py-28 lg:py-40 overflow-hidden border-b border-border">
+        <section className="bg-ink pt-28 lg:pt-40 pb-10 lg:pb-12 overflow-hidden">
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px w-12 bg-gold/40" />
@@ -152,7 +215,7 @@ export default function Home() {
         </section>
 
         {/* ─── SECTION 1.4: PILLAR CARDS ─────────────────────────────────── */}
-        <section className="bg-ink py-28 lg:py-36 border-b border-border">
+        <section className="bg-ink pt-10 lg:pt-12 pb-28 lg:pb-36 border-b border-border">
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
               {[
@@ -190,20 +253,14 @@ export default function Home() {
                     </svg>
                   ),
                 },
-              ].map(({ label, title, body, icon }) => (
+              ].map(({ title, body, icon }) => (
                 <div
                   key={title}
                   className="bg-ink p-10 lg:p-14 flex flex-col gap-8 group
                              hover:bg-surface transition-colors duration-300"
-                  style={{
-                    boxShadow: "inset 0 1px 0 rgba(197,169,122,0.06)",
-                  }}
                 >
-                  <div className="flex items-start justify-between">
+                  <div className="flex items-start">
                     <span className="text-gold opacity-60">{icon}</span>
-                    <span className="text-[9px] tracking-[0.35em] uppercase text-ghost font-mono">
-                      {label}
-                    </span>
                   </div>
 
                   <div>
@@ -264,7 +321,7 @@ export default function Home() {
                 </div>
                 <h2
                   className="font-display font-bold text-bone leading-[0.93] mb-8"
-                  style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
+                  style={{ fontSize: "clamp(2rem, 3.2vw, 3.5rem)" }}
                 >
                   Wherever Business Happens, We&rsquo;re Already There
                 </h2>
@@ -288,18 +345,19 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Right: aerial city image */}
-              <div className="relative hidden lg:block h-80 overflow-hidden">
+              {/* Right: Earth from space image */}
+              <div className="relative hidden lg:block h-[28rem] overflow-hidden">
                 <div
                   className="absolute inset-0"
                   style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&auto=format&fit=crop&q=80')",
+                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=80')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/50" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-ink/60" />
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-ink to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-ink to-transparent" />
               </div>
             </div>
           </div>
