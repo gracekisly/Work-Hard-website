@@ -55,41 +55,73 @@ export default function CareersPage() {
           </div>
         </section>
         {/* ─── SECTION 5.2: WHY WORK HERE ────────────────────────────────── */}
-        <section className="bg-surface py-28 lg:py-40 border-b border-border">
+        <section className="bg-surface py-16 lg:py-24 border-b border-border">
           <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
-            <div className="flex items-center gap-5 mb-20">
+            <div className="flex items-center gap-5 mb-12">
               <div className="h-px w-12 bg-gold/40" />
               <span className="text-sm tracking-[0.25em] uppercase text-dim">
                 Why Work Here
               </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
-              {[
-                {
-                  label: "Growth",
-                  body: "We invest in our people the same way we invest in our clients: relentlessly and with measurable outcomes.",
-                },
-                {
-                  label: "Impact",
-                  body: "Every role at Work Hard Company is a high-impact role. We don't have passengers.",
-                },
-                {
-                  label: "Culture",
-                  body: "We work hard. We expect the same. In return, you'll be surrounded by the best.",
-                },
-              ].map(({ label, body }) => (
-                <div key={label} className="bg-surface p-10 lg:p-14 flex flex-col gap-6">
-                  <div className="w-1.5 h-1.5 bg-gold/70 rotate-45 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-display text-2xl font-bold text-bone mb-4">
-                      {label}
-                    </h3>
-                    <p className="text-dim text-base leading-relaxed">{body}</p>
-                  </div>
-                  <div className="h-px w-8 bg-gold/30 mt-auto" />
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr_1fr] lg:grid-rows-2">
+
+              {/* Growth — row 1, col 1 */}
+              <div className="bg-surface p-8 lg:p-10 flex flex-col gap-6">
+                <div className="w-1.5 h-1.5 bg-gold/70 rotate-45 flex-shrink-0" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-bone mb-4">Growth</h3>
+                  <p className="text-dim text-base leading-relaxed">We invest in our people the same way we invest in our clients: relentlessly and with measurable outcomes.</p>
                 </div>
-              ))}
+                <div className="h-px w-8 bg-gold/30 mt-auto" />
+              </div>
+
+              {/* Center image — spans both rows, col 2 */}
+              <div className="min-h-[400px] lg:min-h-0 lg:row-span-2 relative">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&auto=format&fit=crop&q=80')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "82% center",
+                  }}
+                />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-surface to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface to-transparent" />
+              </div>
+
+              {/* Culture — row 1, col 3 */}
+              <div className="bg-surface p-8 lg:p-10 flex flex-col gap-6">
+                <div className="w-1.5 h-1.5 bg-gold/70 rotate-45 flex-shrink-0" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-bone mb-4">Culture</h3>
+                  <p className="text-dim text-base leading-relaxed">We work hard. We expect the same. In return, you&rsquo;ll be surrounded by the best.</p>
+                </div>
+                <div className="h-px w-8 bg-gold/30 mt-auto" />
+              </div>
+
+              {/* Impact — row 2, col 1 */}
+              <div className="bg-surface p-8 lg:p-10 flex flex-col gap-6">
+                <div className="w-1.5 h-1.5 bg-gold/70 rotate-45 flex-shrink-0" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-bone mb-4">Impact</h3>
+                  <p className="text-dim text-base leading-relaxed">Every role at Work Hard Company is a high-impact role. We don&rsquo;t have passengers.</p>
+                </div>
+                <div className="h-px w-8 bg-gold/30 mt-auto" />
+              </div>
+
+              {/* Standards — row 2, col 3 */}
+              <div className="bg-surface p-8 lg:p-10 flex flex-col gap-6">
+                <div className="w-1.5 h-1.5 bg-gold/70 rotate-45 flex-shrink-0" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-bone mb-4">Standards</h3>
+                  <p className="text-dim text-base leading-relaxed">Excellence is not aspirational here. It is the operational baseline from which everything else is measured.</p>
+                </div>
+                <div className="h-px w-8 bg-gold/30 mt-auto" />
+              </div>
+
             </div>
           </div>
         </section>
@@ -180,7 +212,7 @@ export default function CareersPage() {
 
         {/* ─── SECTION 5.5: CAREERS CTA ──────────────────────────────────── */}
         <section
-          className="relative py-32 lg:py-44 overflow-hidden border-b border-border"
+          className="relative py-28 lg:py-36 overflow-hidden border-b border-border"
           style={{
             background: "linear-gradient(135deg, #0D1117 0%, #07090C 50%, #0D1117 100%)",
           }}
@@ -191,31 +223,45 @@ export default function CareersPage() {
               background: "radial-gradient(circle at top right, #C5A97A, transparent 65%)",
             }}
           />
-          <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-5 mb-12">
-              <div className="h-px w-12 bg-gold/40" />
-              <span className="text-sm tracking-[0.25em] uppercase text-gold">
-                Get In Touch
-              </span>
-              <div className="h-px w-12 bg-gold/40" />
+          <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+              <div>
+                <div className="flex items-center gap-5 mb-12">
+                  <div className="h-px w-12 bg-gold/40" />
+                  <span className="text-sm tracking-[0.25em] uppercase text-dim">
+                    Get In Touch
+                  </span>
+                </div>
+                <h2
+                  className="font-display font-bold text-bone leading-[0.93] mb-8"
+                  style={{ fontSize: "clamp(2rem, 3.5vw, 3.5rem)" }}
+                >
+                  Questions? Reach Out to Our Representatives.
+                </h2>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-3 text-sm tracking-[0.2em] uppercase text-gold
+                             hover:text-gold-bright transition-colors duration-200
+                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold
+                             focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+                >
+                  Contact Us
+                  <span aria-hidden>→</span>
+                </a>
+              </div>
+              {/* Right image */}
+              <div className="hidden lg:flex items-center py-4">
+                <div
+                  className="w-full h-72"
+                  style={{
+                    backgroundImage: "url('https://images.pexels.com/photos/36733315/pexels-photo-36733315.jpeg?auto=compress&cs=tinysrgb&w=1200')",
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center center",
+                  }}
+                />
+              </div>
             </div>
-            <h2
-              className="font-display font-bold text-bone leading-[0.93] mb-12 mx-auto"
-              style={{ fontSize: "clamp(1.8rem, 2.8vw, 3rem)", maxWidth: "22ch" }}
-            >
-              Questions? Reach Out to Our Top Representatives.
-            </h2>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4
-                         bg-gold text-ink text-base tracking-[0.2em] uppercase font-bold
-                         hover:bg-gold-bright transition-colors duration-200
-                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold
-                         focus-visible:ring-offset-2 focus-visible:ring-offset-ink
-                         active:opacity-90"
-            >
-              Contact Us
-            </a>
           </div>
         </section>
       </main>

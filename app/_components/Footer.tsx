@@ -34,14 +34,14 @@ export default function Footer() {
             >
               WORK HARD
             </Link>
-            <p className="text-dim text-base leading-relaxed max-w-[200px]">
+            <p className="text-dim text-base leading-relaxed max-w-[200px] italic">
               Innovating at the edge of tomorrow.
             </p>
           </div>
 
           {columns.map(({ heading, links, hrefs }) => (
             <div key={heading}>
-              <p className="text-sm tracking-[0.2em] uppercase text-dim mb-5">
+              <p className="text-sm tracking-[0.2em] uppercase text-gold/80 mb-5">
                 {heading}
               </p>
               <ul className="space-y-3">

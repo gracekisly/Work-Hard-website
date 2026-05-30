@@ -92,7 +92,7 @@ export default function TeamPage() {
               className="font-display font-bold text-bone leading-[0.9] mb-10 max-w-4xl"
               style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
             >
-              The People Behind<br />the Work
+              People First.<br />Always.
             </h1>
             <p className="text-dim text-base md:text-lg leading-relaxed max-w-2xl font-light">
               Our leadership team brings decades of combined expertise across technology,
@@ -170,30 +170,47 @@ export default function TeamPage() {
         </section>
 
         {/* ─── SECTION 3.4: CULTURE BLURB ────────────────────────────────── */}
-        <section className="bg-surface py-28 lg:py-36 border-b border-border">
-          <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
-            <div className="max-w-2xl">
-              <h2
-                className="font-display font-bold text-bone leading-[0.93] mb-8"
-                style={{ fontSize: "clamp(2rem, 3.5vw, 3.5rem)" }}
-              >
-                A Team Built to Win
-              </h2>
-              <p className="text-dim text-base leading-relaxed mb-10">
-                We hire for drive. We develop for impact. Our team is our most
-                critical infrastructure — and we invest in it accordingly.
-              </p>
-              <a
-                href="/careers"
-                className="inline-flex items-center gap-3 text-sm tracking-[0.2em] uppercase text-gold
-                           hover:text-gold-bright transition-colors duration-200
-                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold
-                           focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-              >
-                See Open Roles
-                <span aria-hidden>→</span>
-              </a>
+        <section
+          className="relative py-32 lg:py-44 overflow-hidden border-b border-border"
+          style={{
+            background: "linear-gradient(135deg, #0D1117 0%, #07090C 50%, #0D1117 100%)",
+          }}
+        >
+          <div
+            className="pointer-events-none absolute top-0 right-0 w-[36rem] h-[36rem] opacity-10"
+            style={{
+              background: "radial-gradient(circle at top right, #C5A97A, transparent 65%)",
+            }}
+          />
+          <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-5 mb-12">
+              <div className="h-px w-12 bg-gold/40" />
+              <span className="text-sm tracking-[0.25em] uppercase text-gold">
+                Join Us
+              </span>
+              <div className="h-px w-12 bg-gold/40" />
             </div>
+            <h2
+              className="font-display font-bold text-bone leading-[0.93] mb-8 mx-auto"
+              style={{ fontSize: "clamp(1.8rem, 2.8vw, 3rem)", maxWidth: "22ch" }}
+            >
+              A Team Built to Win
+            </h2>
+            <p className="text-dim text-base leading-relaxed mb-12 mx-auto max-w-xl">
+              We hire for drive. We develop for impact. Our team is our most
+              critical infrastructure — and we invest in it accordingly.
+            </p>
+            <a
+              href="/careers"
+              className="inline-flex items-center justify-center px-8 py-4
+                         bg-gold text-ink text-base tracking-[0.2em] uppercase font-bold
+                         hover:bg-gold-bright transition-colors duration-200
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold
+                         focus-visible:ring-offset-2 focus-visible:ring-offset-ink
+                         active:opacity-90"
+            >
+              See Open Roles
+            </a>
           </div>
         </section>
       </main>
