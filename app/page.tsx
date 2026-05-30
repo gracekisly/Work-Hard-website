@@ -152,9 +152,7 @@ export default function Home() {
                   }}
                 />
                 <p className="mt-4 text-[11px] tracking-[0.12em] uppercase text-dim/50 leading-relaxed">
-                  Recognized by Architectural Digest Business as one of the Top 10
-                  Corporate Headquarters of 2024. Certified by the U.S. Green
-                  Building Council.
+                  Named one of the Top 10 Corporate Headquarters of 2024. APEX Platinum Sustainability Certified.
                 </p>
               </div>
 
@@ -174,8 +172,8 @@ export default function Home() {
                     Our global headquarters stands as a testament to what Work Hard
                     Company represents: precision, ambition, and an uncompromising
                     standard of excellence. Completed in 2024 following an extensive
-                    renovation, our 47-story flagship facility is LEED Platinum
-                    certified, carbon neutral, and engineered to the highest
+                    renovation, our 47-story flagship facility is carbon neutral,
+                    seismically resilient, and engineered to the highest
                     specifications of modern enterprise infrastructure.
                   </p>
                   <p className="text-dim text-base leading-relaxed">
@@ -387,12 +385,12 @@ export default function Home() {
               style={{ animation: "ticker-scroll 85s linear infinite" }}
             >
               {[
-                "Meridian Group", "Vantage Capital", "Nexus Global", "Stratos Partners",
-                "Ashford Holdings", "Crestline Advisors", "Pinnacle Global", "Luminary Capital",
-                "Vertex Solutions", "Empire Strategy Group",
-                "Meridian Group", "Vantage Capital", "Nexus Global", "Stratos Partners",
-                "Ashford Holdings", "Crestline Advisors", "Pinnacle Global", "Luminary Capital",
-                "Vertex Solutions", "Empire Strategy Group",
+                "Meridian Collective", "Vantage Global", "Nexus Collective", "Stratos Partners",
+                "Ashford Holdings", "Crestmore Advisors", "Pinnacle Global", "Luminary Capital",
+                "Vertex Global Partners", "Empire Strategy Group",
+                "Meridian Collective", "Vantage Global", "Nexus Collective", "Stratos Partners",
+                "Ashford Holdings", "Crestmore Advisors", "Pinnacle Global", "Luminary Capital",
+                "Vertex Global Partners", "Empire Strategy Group",
               ].map((name, i) => (
                 <span
                   key={i}
