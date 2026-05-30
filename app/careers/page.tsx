@@ -43,7 +43,7 @@ export default function CareersPage() {
             </div>
             <h1
               className="font-display font-bold text-bone leading-[0.9] mb-10 max-w-4xl"
-              style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
+              style={{ fontSize: "clamp(2rem, 8vw, 8rem)" }}
             >
               Work Harder.<br />With Us.
             </h1>
@@ -136,8 +136,8 @@ export default function CareersPage() {
             </div>
 
             <div className="w-full">
-              {/* Header row */}
-              <div className="grid grid-cols-[1fr_1fr_1fr_auto] gap-8 border-b border-border pb-4 mb-px">
+              {/* Header row — hidden on mobile, shown on sm+ */}
+              <div className="hidden sm:grid sm:grid-cols-[1fr_1fr_1fr_auto] gap-8 border-b border-border pb-4 mb-px">
                 <span className="text-[13px] tracking-[0.25em] uppercase text-dim font-mono text-left">Position</span>
                 <span className="text-[13px] tracking-[0.25em] uppercase text-dim font-mono text-left">Sector</span>
                 <span className="text-[13px] tracking-[0.25em] uppercase text-dim font-mono text-left">Location</span>
@@ -158,14 +158,16 @@ export default function CareersPage() {
               ].map(({ title, dept }, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-[1fr_1fr_1fr_auto] gap-8 items-center border-b border-border py-5 group hover:bg-white/[0.02] transition-colors duration-200"
+                  className="border-b border-border py-5 group hover:bg-white/[0.02] transition-colors duration-200
+                             flex flex-col gap-1
+                             sm:flex-none sm:grid sm:grid-cols-[1fr_1fr_1fr_auto] sm:gap-8 sm:items-center"
                 >
                   <span className="font-body text-lg font-bold text-bone tracking-wide">{title}</span>
                   <span className="text-[12px] tracking-[0.15em] uppercase text-dim/70">{dept}</span>
                   <span className="text-[12px] tracking-[0.15em] uppercase text-dim/70">Global / Remote</span>
                   <a
                     href="/contact#submit-inquiry"
-                    className="text-[11px] tracking-[0.2em] uppercase text-gold/70
+                    className="text-[11px] tracking-[0.2em] uppercase text-gold/70 mt-1 sm:mt-0
                                hover:text-gold transition-colors duration-200 whitespace-nowrap
                                focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold"
                   >
@@ -250,7 +252,7 @@ export default function CareersPage() {
                 </a>
               </div>
               {/* Right image */}
-              <div className="hidden lg:flex items-center py-4">
+              <div className="flex items-center py-4">
                 <div
                   className="w-full h-72"
                   style={{

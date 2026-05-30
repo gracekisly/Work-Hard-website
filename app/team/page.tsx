@@ -90,7 +90,7 @@ export default function TeamPage() {
             </div>
             <h1
               className="font-display font-bold text-bone leading-[0.9] mb-10 max-w-4xl"
-              style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
+              style={{ fontSize: "clamp(2rem, 8vw, 8rem)" }}
             >
               People First.<br />Always.
             </h1>

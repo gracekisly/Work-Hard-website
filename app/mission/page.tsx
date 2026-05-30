@@ -51,7 +51,7 @@ export default function MissionPage() {
             {/* H1 */}
             <h1
               className="font-display font-bold text-bone leading-[0.9] mb-10 max-w-4xl"
-              style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
+              style={{ fontSize: "clamp(2rem, 8vw, 8rem)" }}
             >
               Our<br />Mission
             </h1>
@@ -179,7 +179,7 @@ export default function MissionPage() {
               </div>
 
               {/* Right: abstract analytics visual */}
-              <div className="border border-border bg-raised p-8 lg:p-10 hidden lg:block"
+              <div className="border border-border bg-raised p-8 lg:p-10"
                 style={{ boxShadow: "inset 0 1px 0 rgba(197,169,122,0.05)" }}>
                 <p className="text-[10px] tracking-[0.3em] uppercase text-dim mb-8">
                   Work Hard Analytics Platform™
@@ -217,7 +217,7 @@ export default function MissionPage() {
                 </div>
 
                 {/* Bottom decorative grid */}
-                <div className="mt-10 pt-8 border-t border-border grid grid-cols-3 gap-4">
+                <div className="mt-10 pt-8 border-t border-border grid grid-cols-3 sm:grid-cols-3 gap-4">
                   {[
                     { label: "Markets", val: "127" },
                     { label: "Clients", val: "30K+" },
@@ -371,7 +371,7 @@ export default function MissionPage() {
 
               {/* Right: image */}
               <div
-                className="hidden lg:block h-96 overflow-hidden"
+                className="h-56 sm:h-72 lg:h-96 overflow-hidden"
                 style={{
                   backgroundImage: "url('https://images.unsplash.com/photo-1555963153-11ff60182d08?w=900&auto=format&fit=crop&q=80')",
                   backgroundSize: "cover",

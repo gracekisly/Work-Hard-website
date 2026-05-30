@@ -24,8 +24,8 @@ export default function Footer() {
   return (
     <footer className="bg-surface border-t border-border">
       <div className="px-8 md:px-16 lg:px-24 max-w-screen-xl mx-auto">
-        <div className="py-16 lg:py-20 grid grid-cols-2 md:grid-cols-4 gap-10">
-          <div className="col-span-2 md:col-span-1">
+        <div className="py-16 lg:py-20 grid grid-cols-3 md:grid-cols-4 gap-10">
+          <div className="col-span-3 md:col-span-1">
             <Link
               href="/"
               className="font-display text-sm font-bold text-bone tracking-tight mb-4 inline-block
@@ -68,15 +68,9 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             {legal.map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-sm text-dim hover:text-bone transition-colors duration-200
-                           focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold focus-visible:rounded-sm
-                           active:opacity-50"
-              >
+              <span key={item} className="text-sm text-dim">
                 {item}
-              </a>
+              </span>
             ))}
           </div>
         </div>

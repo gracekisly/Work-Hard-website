@@ -44,7 +44,7 @@ export default function WhatWeDoPage() {
             </div>
             <h1
               className="font-display font-bold text-bone leading-[0.9] mb-10 max-w-4xl"
-              style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
+              style={{ fontSize: "clamp(2rem, 8vw, 8rem)" }}
             >
               Everything.<br />Optimized.
             </h1>
@@ -225,7 +225,7 @@ export default function WhatWeDoPage() {
 
               {/* Right: image */}
               <div
-                className="hidden lg:block h-96 overflow-hidden"
+                className="h-56 sm:h-72 lg:h-96 overflow-hidden"
                 style={{
                   backgroundImage: "url('https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=900&auto=format&fit=crop&q=80')",
                   backgroundSize: "cover",

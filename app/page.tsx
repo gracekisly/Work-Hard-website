@@ -33,7 +33,7 @@ export default function Home() {
 
             <h1
               className="font-display font-bold text-bone leading-[0.92] mb-8
-                         text-[clamp(3.5rem,7vw,7rem)] max-w-5xl"
+                         text-[clamp(2rem,7vw,7rem)] max-w-5xl"
               style={{ animation: "fade-up 0.9s 0.12s ease both" }}
             >
               We Provide Innovative Solutions
@@ -75,21 +75,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 right-8 md:right-16 lg:right-24 z-10 flex flex-col items-center gap-3">
-            <span className="text-[9px] tracking-[0.3em] uppercase text-dim/50 [writing-mode:vertical-rl]">
-              Scroll
-            </span>
-            <svg
-              width="1"
-              height="48"
-              viewBox="0 0 1 48"
-              className="text-gold/30"
-              style={{ animation: "bounce-down 2s ease-in-out infinite" }}
-            >
-              <line x1="0.5" y1="0" x2="0.5" y2="48" stroke="currentColor" strokeWidth="1" />
-            </svg>
-          </div>
         </section>
 
         {/* ─── SECTION 1.2: STATS TICKER ─────────────────────────────────── */}
@@ -199,7 +184,7 @@ export default function Home() {
 
             <p
               className="font-display font-bold text-bone leading-[0.9]"
-              style={{ fontSize: "clamp(2.8rem, 5.5vw, 6.5rem)" }}
+              style={{ fontSize: "clamp(1.8rem, 5.5vw, 6.5rem)" }}
             >
               Managing
               <br />
@@ -344,7 +329,7 @@ export default function Home() {
               </div>
 
               {/* Right: Earth from space image */}
-              <div className="relative hidden lg:block h-[28rem] overflow-hidden">
+              <div className="relative h-56 sm:h-72 lg:h-[28rem] overflow-hidden">
                 <div
                   className="absolute inset-0"
                   style={{
@@ -385,12 +370,10 @@ export default function Home() {
               style={{ animation: "ticker-scroll 85s linear infinite" }}
             >
               {[
-                "Meridian Collective", "Vantage Global", "Nexus Collective", "Stratos Partners",
-                "Ashford Holdings", "Crestmore Advisors", "Pinnacle Global", "Luminary Capital",
-                "Vertex Global Partners", "Empire Strategy Group",
-                "Meridian Collective", "Vantage Global", "Nexus Collective", "Stratos Partners",
-                "Ashford Holdings", "Crestmore Advisors", "Pinnacle Global", "Luminary Capital",
-                "Vertex Global Partners", "Empire Strategy Group",
+                "Aurion Group", "Halcyon Strategic", "Stratos Partners", "Ashford Holdings",
+                "Crestmore Advisors", "Pinnacle Global", "Luminary Capital", "Empire Strategy Group",
+                "Aurion Group", "Halcyon Strategic", "Stratos Partners", "Ashford Holdings",
+                "Crestmore Advisors", "Pinnacle Global", "Luminary Capital", "Empire Strategy Group",
               ].map((name, i) => (
                 <span
                   key={i}
@@ -430,7 +413,7 @@ export default function Home() {
             </p>
             <h2
               className="font-display font-bold text-bone leading-[0.93] mb-8 mx-auto"
-              style={{ fontSize: "clamp(2.5rem, 4.5vw, 5.5rem)", maxWidth: "14ch" }}
+              style={{ fontSize: "clamp(1.8rem, 4.5vw, 5.5rem)", maxWidth: "14ch" }}
             >
               Ready to Work Hard?
             </h2>
