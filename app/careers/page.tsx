@@ -164,7 +164,7 @@ export default function CareersPage() {
                   <span className="text-[12px] tracking-[0.15em] uppercase text-dim/70">{dept}</span>
                   <span className="text-[12px] tracking-[0.15em] uppercase text-dim/70">Global / Remote</span>
                   <a
-                    href="#"
+                    href="/contact#submit-inquiry"
                     className="text-[11px] tracking-[0.2em] uppercase text-gold/70
                                hover:text-gold transition-colors duration-200 whitespace-nowrap
                                focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold"
